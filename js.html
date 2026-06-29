@@ -9,18 +9,21 @@
   <!-- <h1 id="title">Hello</h1>
   <button id="btn">CLick me</button> -->
 
-<!-- <h1 id="count">0</h1>
-<p id="record"><p>
-<button id="increase">Click Me</button>
-
+<h1 id="count">0</h1>
+<!-- <p id="record"><p> -->
+<button id="increase">+</button>
+<button id="decrease">-</button>
+<button id="dubble">x</button>
 <button id="reset">Reset</button>
 
-<button id="dubble">Double</button> -->
-<P id="emotion">😊 Happy</P>
-<button id="mood">Change mood</button>
+<!-- <P id="emotion">😊 Happy</P>
+<button id="mood">Change mood</button> -->
 
 
   <script>
+
+//######################################    Lesson 1         ########################################
+
     // console.log("Hello!");
     // let title = document.getElementById("title");
     // title.textContent = "Welcome";
@@ -28,7 +31,7 @@
     // let btn = document.getElementById("btn");
     // btn.addEventListener("click", function(){console.log("Button Clicked")});
 
-    let count = 0;
+    // let count = 0;
    
 
     // let countText = document.getElementById("count");
@@ -79,31 +82,91 @@
     // })
     // resetBtn.style.display = "none";
     
-    let btn = document.getElementById("mood");
-    let emotion = document.getElementById("emotion");
+    // let btn = document.getElementById("mood");
+    // let emotion = document.getElementById("emotion");
     
-    btn.addEventListener("click", function(){
-      count = count + 1;
-      if(count >1){
+    // btn.addEventListener("click", function(){
+    //   count = count + 1;
+    //   if(count >1){
         
         
-      }
-      if(count ==1 ){
-        emotion.textContent = "🫥 Okay";
-      }
-      else if (count ==2 ) {
-        emotion.textContent = "🙁 Sad";
-        } 
-      else if(count==3 ){
-        emotion.textContent = "😊 Happy";
-        count = 0;
-      }
+    //   }
+    //   if(count ==1 ){
+    //     emotion.textContent = "🫥 Okay";
+    //   }
+    //   else if (count ==2 ) {
+    //     emotion.textContent = "🙁 Sad";
+    //     } 
+    //   else if(count==3 ){
+    //     emotion.textContent = "😊 Happy";
+    //     count = 0;
+    //   }
       
       
+    // })
+
+    // ######################################   Lesson 2    ######################################
+
+    let namee = "Pratyush";
+    let age = 18;
+    let color =  "Blue";
+    console.log(namee);
+    console.log(age);
+    console.log(color);
+
+
+    //# UPGRADED COUNTER
+    let count = 0;
+
+    let countText = document.getElementById("count");
+    let increase = document.getElementById("increase");
+    let decrease = document.getElementById("decrease");
+    let dubble = document.getElementById("dubble");
+    let resetBtn = document.getElementById("reset");
+
+    increase.addEventListener("click", function(){
+      count++;
+      countText.textContent = count;
+
+      if(count%2==0){
+        countText.style.color = "blue";
+      }
+      else{
+        countText.style.color = "green";
+      }
     })
 
+    decrease.addEventListener("click", function(){
+      count--;
+      countText.textContent = count;
 
-  </script>
+      if(count%2==0){
+        countText.style.color = "blue";
+      }
+      else{
+        countText.style.color = "green";
+      }
+    })
+
+    dubble.addEventListener("click", function(){
+      count*=2;
+      countText.textContent = count;
+
+      if(count%2==0){
+        countText.style.color = "blue";
+      }
+      else{
+        countText.style.color = "green";
+      }
+    })
+
+    resetBtn.addEventListener("click", function(){
+      count = 0;
+      countText.textContent = count;
+      countText.style.color = "black";
+    })
+
+    </script>
   
 </body>
 </html>
