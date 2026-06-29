@@ -128,36 +128,21 @@
       count++;
       countText.textContent = count;
 
-      if(count%2==0){
-        countText.style.color = "blue";
-      }
-      else{
-        countText.style.color = "green";
-      }
+     updateUI();
     })
 
     decrease.addEventListener("click", function(){
       count--;
       countText.textContent = count;
 
-      if(count%2==0){
-        countText.style.color = "blue";
-      }
-      else{
-        countText.style.color = "green";
-      }
+     updateUI();
     })
 
     dubble.addEventListener("click", function(){
       count*=2;
       countText.textContent = count;
 
-      if(count%2==0){
-        countText.style.color = "blue";
-      }
-      else{
-        countText.style.color = "green";
-      }
+     updateUI();
     })
 
     resetBtn.addEventListener("click", function(){
@@ -166,6 +151,22 @@
       countText.style.color = "black";
     })
 
+
+    // with funtion
+    function updateUI() {
+
+      if(count < 0){
+        countText.style.color = "red";
+      }
+      else if(count%2 == 0){
+        countText.style.color = "blue";
+      }
+      else{
+        countText.style.color = "green";
+      }
+    }
+
+  
     </script>
   
 </body>
