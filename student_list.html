@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="stdname">
+  <button id="addStd">Add student</button>
+  <p id="count"></p>
+
+  <script>
+    let addStd = document.getElementById("addStd");
+    let stdname = document.getElementById("stdname");
+    let count = document.getElementById("count");
+
+    let student = [];
+
+    addStd.addEventListener("click", function(){
+
+      let name = stdname.value;
+
+      student.push(name);
+
+      count.textContent = student.length; 
+
+      //###  stdname.textContent = ""; // stdname is an input. Inputs don't use .textContent.
+      
+      stdname.value = "";  // inputs use .value to change them. Now this clears the input
+
+    })
+  </script>
+  
+</body>
+</html>
